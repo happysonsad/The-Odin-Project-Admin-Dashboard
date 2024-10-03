@@ -49,11 +49,20 @@ body {
 
 .sidebar-header {
     margin-top: 1rem;
+    margin-left: -1rem;
     margin-bottom: 2rem;
+    display: flex;
+}
+
+.sidebar-list > li {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+}
+
+.sidebar-list > li:not(.sidebar-header, .sidebar-communities) {
+    margin-bottom: 1rem;
 }
 
 .sidebar-header > p {
@@ -118,6 +127,7 @@ body {
 }
 
 .main-content {
+    background-color: var(--light-gray);
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
