@@ -52,13 +52,19 @@ body {
     margin-left: -1rem;
     margin-bottom: 2rem;
     display: flex;
-}
-
-.sidebar-list > li {
-    display: flex;
     justify-content: start;
     align-items: center;
     gap: 0.8rem;
+}
+
+
+
+.sidebar-list > li:not(.sidebar-header) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: -0.5rem;
 }
 
 .sidebar-list > li:not(.sidebar-header, .sidebar-communities) {
