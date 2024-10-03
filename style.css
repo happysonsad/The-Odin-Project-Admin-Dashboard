@@ -2,6 +2,9 @@
 
 :root {
   line-height: 1.5;
+  --light-blue: #0993f7;
+  --custom-white: #f4f4f4;
+  --light-gray: #d3d3d3;
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -21,4 +24,118 @@ h1, h2, h3, h4, h5 {
 img {
   display: block;
   max-inline-size: 100%;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+
+.sidebar {
+    background-color: var(--light-blue);
+    grid-row: 1 / 3;
+    display: grid;
+    width: min(20vw, 50vw);
+}
+
+.sidebar-list {
+    margin-right: auto;
+}
+
+.sidebar-header {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-header > p {
+    font-size: 1.5rem;
+}
+
+.sidebar-communities {
+    margin-bottom: 2rem;
+}
+
+.sidebar-list > li {
+    list-style-type: none;
+    color: var(--custom-white);
+    font-weight: bolder;
+}
+
+.header {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.search-bar {
+    padding-left: 2rem;
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+.search-bar > input {
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem 17rem;
+}
+
+.personal-profile {
+    align-self: center;
+    justify-self: end;
+    padding-right: 3rem;
+    margin-top: 0.5rem;
+}
+
+.profile-greeting {
+    padding-left: 2rem;
+    align-self: center;
+}
+
+.profile-buttons {
+    align-self: center;
+    justify-self: end;
+    padding-right: 3rem;
+}
+
+.profile-buttons > button {
+    border-radius: 15px;
+    border: none;
+    color: var(--custom-white);
+    background-color: var(--light-blue);
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.your-project {
+    grid-row: span 2;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.announcements {
+
+}
+
+.trending {
+
 }
