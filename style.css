@@ -2,9 +2,6 @@
 
 :root {
   line-height: 1.5;
-  --light-blue: #0993f7;
-  --custom-white: #f4f4f4;
-  --light-gray: #d3d3d3;
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -24,6 +21,14 @@ h1, h2, h3, h4, h5 {
 img {
   display: block;
   max-inline-size: 100%;
+}
+
+
+:root {
+    --light-blue: #0993f7;
+    --custom-white: #f4f4f4;
+    --light-gray: #e2dede;
+    --yellow-border: #f0b801;
 }
 
 body {
@@ -93,8 +98,10 @@ body {
 
 .search-bar {
     padding-left: 2rem;
-    align-self: center;
     margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .search-bar > input {
@@ -102,50 +109,95 @@ body {
     border: none;
     border-radius: 15px;
     padding: 0.5rem 17rem;
+    align-items: flex-start;
 }
 
 .personal-profile {
-    align-self: center;
     justify-self: end;
     padding-right: 3rem;
-    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.personal-profile > p {
+    font-weight: bolder;
 }
 
 .profile-greeting {
     padding-left: 2rem;
-    align-self: center;
+    align-items: center;
+    display: flex;
+    font-weight: bolder;
+}
+
+.greeting-container > .greeting{
+    font-size: 0.8rem;
+}
+
+.greeting-container > .greeting-username {
+    font-size: 1.5rem;
 }
 
 .profile-buttons {
     align-self: center;
     justify-self: end;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .profile-buttons > button {
-    border-radius: 15px;
+    border-radius: 3rem;
     border: none;
     color: var(--custom-white);
     background-color: var(--light-blue);
     font-size: 1rem;
-    padding: 0.5rem 2rem;
-    margin: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+.profile-buttons > button:not(.Share-button) {
+    margin-right: 1rem;
 }
 
 .main-content {
     background-color: var(--light-gray);
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
 }
 
 .your-project {
     grid-row: span 2;
+    padding: 3rem 2rem;
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+.card-container > .card {
+    border-left: 1rem solid var(--yellow-border);
+    border-radius: 1rem;
+    background-color: var(--custom-white);
+    padding: 2rem 3rem;
+}
+
+.main-content-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.projects-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1rem;
+    gap: 2.5rem;
+}
+
+.card > .projects-title {
+    font-weight: bolder;
 }
 
 .announcements {
